@@ -175,7 +175,8 @@ const ChatInputArea = ({
                 className={cn(
                   'p-1 w-full leading-6 body-lg-regular text-text-tertiary outline-none',
                 )}
-                placeholder={t('common.chat.inputPlaceholder') || ''}
+                // placeholder={t('common.chat.inputPlaceholder') || ''}
+                placeholder="提出后续问题"
                 autoFocus
                 autoSize={{ minRows: 1 }}
                 onResize={handleTextareaResize}

@@ -41,6 +41,7 @@ function appendQAToChatList(chatList: ChatItem[], item: any) {
     isAnswer: true,
     citation: item.retriever_resources,
     message_files: getProcessedFilesFromResponse(answerFiles.map((item: any) => ({ ...item, related_id: item.id }))),
+    workflow_run_id: item.workflow_run_id,
   })
   const questionFiles = item.message_files?.filter((file: any) => file.belongs_to === 'user') || []
   chatList.push({
