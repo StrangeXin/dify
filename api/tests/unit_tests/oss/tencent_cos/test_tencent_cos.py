@@ -8,7 +8,6 @@ from tests.unit_tests.oss.__mock.base import (
     BaseStorageTest,
     get_example_bucket,
 )
-from tests.unit_tests.oss.__mock.tencent_cos import setup_tencent_cos_mock
 
 
 class TestTencentCos(BaseStorageTest):

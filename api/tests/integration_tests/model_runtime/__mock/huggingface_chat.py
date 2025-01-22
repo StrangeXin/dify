@@ -2,7 +2,6 @@ import re
 from collections.abc import Generator
 from typing import Any, Literal, Optional, Union
 
-from _pytest.monkeypatch import MonkeyPatch
 from huggingface_hub import InferenceClient  # type: ignore
 from huggingface_hub.inference._text_generation import (  # type: ignore
     Details,

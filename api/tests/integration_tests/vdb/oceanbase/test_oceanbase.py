@@ -6,11 +6,9 @@ from core.rag.datasource.vdb.oceanbase.oceanbase_vector import (
     OceanBaseVector,
     OceanBaseVectorConfig,
 )
-from tests.integration_tests.vdb.__mock.tcvectordb import setup_tcvectordb_mock
 from tests.integration_tests.vdb.test_vector_store import (
     AbstractVectorTest,
     get_example_text,
-    setup_mock_redis,
 )
 
 

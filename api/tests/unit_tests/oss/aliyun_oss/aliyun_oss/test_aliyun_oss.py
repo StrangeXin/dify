@@ -4,7 +4,6 @@ import pytest
 from oss2 import Auth  # type: ignore
 
 from extensions.storage.aliyun_oss_storage import AliyunOssStorage
-from tests.unit_tests.oss.__mock.aliyun_oss import setup_aliyun_oss_mock
 from tests.unit_tests.oss.__mock.base import (
     BaseStorageTest,
     get_example_bucket,
