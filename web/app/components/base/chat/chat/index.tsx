@@ -72,6 +72,15 @@ export type ChatProps = {
   noSpacing?: boolean
 }
 
+const getQueryParams = () => {
+  const urlParams = new URLSearchParams(window.location.search)
+  const params: { [key: string]: string } = {}
+  urlParams.forEach((value, key) => {
+    params[key] = value
+  })
+  return params
+}
+
 const Chat: FC<ChatProps> = ({
   appData,
   config,
@@ -122,6 +131,13 @@ const Chat: FC<ChatProps> = ({
   const chatFooterRef = useRef<HTMLDivElement>(null)
   const chatFooterInnerRef = useRef<HTMLDivElement>(null)
   const userScrolledRef = useRef(false)
+
+  useEffect(() => {
+    const params = getQueryParams()
+    console.log('params', params)
+    if (params.query)
+      onSend?.(params.query)
+  }, [])
 
   const handleScrollToBottom = useCallback(() => {
     if (chatList.length > 1 && chatContainerRef.current && !userScrolledRef.current)

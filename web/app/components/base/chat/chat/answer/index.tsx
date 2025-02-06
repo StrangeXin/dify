@@ -292,10 +292,11 @@ const Answer: FC<AnswerProps> = ({
 
   return (
     <div>
-
-      <h3 className="text-black font-medium text-xl my-2">
+      {(workflowProcess || oldWorkflowProcess)
+      && <h3 className="text-black font-medium text-xl my-2">
         思考过程
       </h3>
+      }
 
       {!workflowProcess && oldWorkflowProcess && !hideProcessDetail && (
         <WorkflowProcessItem
