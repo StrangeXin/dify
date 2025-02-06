@@ -39,6 +39,7 @@ export type AppData = {
   enable_site?: boolean
   end_user_id?: string
   site: SiteInfo
+  workflow_run_id?: string
 }
 
 export type AppConversationData = {

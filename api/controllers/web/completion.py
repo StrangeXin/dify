@@ -110,7 +110,7 @@ class ChatApi(WebApiResource):
 
         try:
             response = AppGenerateService.generate(
-                app_model=app_model, user=end_user, args=args, invoke_from=InvokeFrom.WEB_APP, streaming=streaming
+                app_model=app_model, user=end_user, args=args, invoke_from=InvokeFrom.DEBUGGER, streaming=streaming
             )
 
             return helper.compact_generate_response(response)

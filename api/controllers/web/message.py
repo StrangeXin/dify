@@ -69,6 +69,7 @@ class MessageListApi(WebApiResource):
         "agent_thoughts": fields.List(fields.Nested(agent_thought_fields)),
         "status": fields.String,
         "error": fields.String,
+        "workflow_run_id": fields.String,
     }
 
     message_infinite_scroll_pagination_fields = {
