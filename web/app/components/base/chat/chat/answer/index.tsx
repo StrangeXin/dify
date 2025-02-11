@@ -97,7 +97,7 @@ const Answer: FC<AnswerProps> = ({
     const tracing = workflowProcess?.tracing
     if (tracing) {
       console.log('tracing', tracing)
-      const tracingItem = tracing.find(item => item.title === 'SearXNG 搜索')
+      const tracingItem = tracing.find(item => item.title.includes('SearXNG'))
       if (tracingItem) {
         console.log('tracingItem', tracingItem)
         const outputs = tracingItem.outputs
@@ -271,7 +271,7 @@ const Answer: FC<AnswerProps> = ({
   useEffect(() => {
     console.log('list', list)
     if (list.length > 0) {
-      const tracingItem = list.find(item => item.title === 'SearXNG 搜索')
+      const tracingItem = list.find(item => item.title.includes('SearXNG'))
       if (tracingItem) {
         console.log('tracingItem', tracingItem)
         const outputs = tracingItem.outputs
@@ -347,9 +347,9 @@ const Answer: FC<AnswerProps> = ({
             </div>
       }
 
-      <h3 className="text-black font-medium text-xl my-2">
+      {!item.isOpeningStatement && <h3 className="text-black font-medium text-xl my-2">
         答案
-      </h3>
+      </h3>}
       <div className="flex mb-2 last:mb-0">
         {/* <div className='shrink-0 relative w-10 h-10'>
           {answerIcon || <AnswerIcon />}

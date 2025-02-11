@@ -7,7 +7,6 @@ import AppIcon from '@/app/components/base/app-icon'
 import { MessageDotsCircle } from '@/app/components/base/icons/src/vender/solid/communication'
 import { Edit02 } from '@/app/components/base/icons/src/vender/line/general'
 import { Star06 } from '@/app/components/base/icons/src/vender/solid/shapes'
-import LogoSite from '@/app/components/base/logo/logo-site'
 
 const ConfigPanel = () => {
   const { t } = useTranslation()
@@ -127,13 +126,13 @@ const ConfigPanel = () => {
                 onClick={handleStartChat}
               >
                 <MessageDotsCircle className='mr-2 w-4 h-4 text-white' />
-                {t('share.chat.startChat')}
+                {'开始搜索和问答'}
               </Button>
             </div>
           )
         }
       </div>
-      {
+      {/* {
         showConfigPanelBeforeChat && (site || customConfig) && (
           <div className='mt-4 flex flex-wrap justify-between items-center py-2 text-xs text-gray-400'>
             {site?.privacy_policy
@@ -164,7 +163,7 @@ const ConfigPanel = () => {
             }
           </div>
         )
-      }
+      } */}
     </div>
   )
 }

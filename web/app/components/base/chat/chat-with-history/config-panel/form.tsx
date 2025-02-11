@@ -85,7 +85,7 @@ const Form = () => {
 
     return (
       <PortalSelect
-        popupClassName='w-[200px]'
+        popupClassName='w-[300px]'
         value={newConversationInputs[variable]}
         items={options.map((option: string) => ({ value: option, name: option }))}
         onSelect={item => handleFormChange(variable, item.value as string)}
