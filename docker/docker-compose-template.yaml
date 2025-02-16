@@ -5,7 +5,7 @@ services:
     # image: langgenius/dify-api:0.15.3
     build: 
       context: ../api
-    image: logai/logai-api:0.0.1
+    image: logai/logai-api:0.0.2
     restart: always
     environment:
       # Use the shared environment variables.
@@ -53,7 +53,7 @@ services:
     # image: langgenius/dify-web:0.15.3
     build:
       context: ../web
-    image: logai/logai-web:0.0.1
+    image: logai/logai-web:0.0.2
     restart: always
     environment:
       CONSOLE_API_URL: ${CONSOLE_API_URL:-}
