@@ -22,7 +22,8 @@ def get_app_model(view: Optional[Callable] = None, *, mode: Union[AppMode, list[
 
             app_model = (
                 db.session.query(App)
-                .filter(App.id == app_id, App.tenant_id == current_user.current_tenant_id, App.status == "normal")
+                # .filter(App.id == app_id, App.tenant_id == current_user.current_tenant_id, App.status == "normal")
+                .filter(App.id == app_id, App.status == "normal")
                 .first()
             )
 

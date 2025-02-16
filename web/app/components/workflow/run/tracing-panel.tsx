@@ -204,6 +204,9 @@ const TracingPanel: FC<TracingPanelProps> = ({
   }, [])
 
   const renderNode = (node: TracingNodeProps) => {
+    if (node.data?.title.includes('YC'))
+      return ''
+
     if (node.isParallel) {
       const isCollapsed = collapsedNodes.has(node.id)
       const isHovered = hoveredParallel === node.id

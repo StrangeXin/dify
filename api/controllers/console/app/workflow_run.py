@@ -79,8 +79,8 @@ class WorkflowRunDetailApi(Resource):
 
 class WorkflowRunNodeExecutionListApi(Resource):
     @setup_required
-    @login_required
-    @account_initialization_required
+    # @login_required
+    # @account_initialization_required
     @get_app_model(mode=[AppMode.ADVANCED_CHAT, AppMode.WORKFLOW])
     @marshal_with(workflow_run_node_execution_list_fields)
     def get(self, app_model: App, run_id):

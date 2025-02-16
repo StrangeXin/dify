@@ -24,17 +24,20 @@ const VerticalIconContainer = ({ children }: { children: ReactNode }) => {
 const navLinks = [
   {
     icon: Home,
-    href: '/home',
+    // href: '/home',
+    href: 'javascript:void(0)',
     label: '首页',
   },
   {
     icon: Search,
-    href: '/discover',
+    // href: '/discover',
+    href: 'javascript:void(0)',
     label: '发现',
   },
   {
     icon: BookOpenText,
-    href: '/library',
+    // href: '/library',
+    href: 'javascript:void(0)',
     label: '历史',
   },
 ]
