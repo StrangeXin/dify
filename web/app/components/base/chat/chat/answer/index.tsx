@@ -97,7 +97,7 @@ const Answer: FC<AnswerProps> = ({
     const tracing = workflowProcess?.tracing
     if (tracing) {
       console.log('tracing', tracing)
-      const tracingItem = tracing.find(item => item.title.includes('SearXNG'))
+      const tracingItem = tracing.find(item => item.title.includes('全网搜索'))
       if (tracingItem) {
         console.log('tracingItem', tracingItem)
         const outputs = tracingItem.outputs
@@ -271,7 +271,7 @@ const Answer: FC<AnswerProps> = ({
   useEffect(() => {
     console.log('list', list)
     if (list.length > 0) {
-      const tracingItem = list.find(item => item.title.includes('SearXNG'))
+      const tracingItem = list.find(item => item.title.includes('全网搜索'))
       if (tracingItem) {
         console.log('tracingItem', tracingItem)
         const outputs = tracingItem.outputs
