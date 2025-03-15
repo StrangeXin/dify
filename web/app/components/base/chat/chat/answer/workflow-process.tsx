@@ -56,6 +56,12 @@ const WorkflowProcessItem = ({
     setCollapse(!expand)
   }, [expand])
 
+  useEffect(() => {
+    console.log('succeeded', succeeded)
+    if (succeeded)
+      setCollapse(!collapse)
+  }, [succeeded])
+
   const setCurrentLogItem = useAppStore(s => s.setCurrentLogItem)
   const setShowMessageLogModal = useAppStore(s => s.setShowMessageLogModal)
   const setCurrentLogModalActiveTab = useAppStore(s => s.setCurrentLogModalActiveTab)

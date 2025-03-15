@@ -62,7 +62,6 @@ const Answer: FC<AnswerProps> = ({
     message_files,
   } = item
 
-  console.log('workflowProcess', workflowProcess)
   const hasAgentThoughts = !!agent_thoughts?.length
 
   const [containerWidth, setContainerWidth] = useState(0)
@@ -293,7 +292,7 @@ const Answer: FC<AnswerProps> = ({
   return (
     <div>
       {(workflowProcess || oldWorkflowProcess)
-      && <h3 className="text-black font-medium text-xl my-2">
+      && <h3 className="text-black font-medium text-base my-2">
         思考过程
       </h3>
       }
@@ -347,7 +346,7 @@ const Answer: FC<AnswerProps> = ({
             </div>
       }
 
-      {!item.isOpeningStatement && <h3 className="text-black font-medium text-xl my-2">
+      {!item.isOpeningStatement && <h3 className="text-black font-medium text-base my-2">
         答案
       </h3>}
       <div className="flex mb-2 last:mb-0">

@@ -4,7 +4,6 @@ import {
   useState,
 } from 'react'
 import { useTranslation } from 'react-i18next'
-import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowLeftToLine, ArrowRightFromLine, BookOpenText, Home, Search, Settings } from 'lucide-react'
 import { useChatWithHistoryContext } from '../context'
@@ -14,6 +13,7 @@ import { Edit05 } from '@/app/components/base/icons/src/vender/line/general'
 import type { ConversationItem } from '@/models/share'
 import Confirm from '@/app/components/base/confirm'
 import RenameModal from '@/app/components/base/chat/chat-with-history/sidebar/rename-modal'
+import AppIcon from '@/app/components/base/app-icon'
 
 const VerticalIconContainer = ({ children }: { children: ReactNode }) => {
   return (
@@ -111,13 +111,22 @@ const Sidebar = () => {
             <div className='py-1 text-base font-semibold text-gray-800'>
               {appData?.site.title}
             </div> */}
-            <Image
+            <AppIcon
+              className='mr-3'
+              width={60}
+              height={60}
+              iconType={appData?.site.icon_type}
+              icon={appData?.site.icon}
+              background={appData?.site.icon_background}
+              imageUrl={appData?.site.icon_url}
+            />
+            {/* <Image
               className='mr-3'
               src="/logo.png"
               alt="Log.AI"
               width={60}
               height={60}
-            />
+            /> */}
             {!isCollapsed && <div className='text-lg font-semibold text-gray-800 text-2xl leading-[60px]'>
               Log.AI
             </div>}

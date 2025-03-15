@@ -24,7 +24,7 @@ const Question: FC<QuestionProps> = ({
   } = item
   return (
     <div className="w-full">
-      <h2 className="text-black font-medium text-2xl lg:w-9/12">
+      <h2 className="text-black font-medium text-base lg:w-9/12">
         {content}
       </h2>
     </div>
